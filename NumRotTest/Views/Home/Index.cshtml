@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">NumRotTest</h1>
+    <br /><br />
+
+
+    
+    @model User
+    <form action="api/Users/CreateUser" method="post">
+
+        <div class="rendered-form">
+            <div class="formbuilder-number form-group field-docNumber">
+                <label for="docNumber" class="formbuilder-number-label">Documento de Identificación<span class="formbuilder-required">*</span></label>
+                @Html.TextBoxFor(m => m.docNumber)
+            </div>
+            <div class="formbuilder-text form-group field-firstName">
+                <label for="firstName" class="formbuilder-text-label">Primer Nombre<span class="formbuilder-required">*</span></label>
+                @Html.TextBoxFor(m => m.firstName)
+            </div>
+            <div class="formbuilder-text form-group field-secondName">
+                <label for="secondName" class="formbuilder-text-label">Segundo Nombre</label>
+                @Html.TextBoxFor(m => m.secondName)
+            </div>
+            <div class="formbuilder-text form-group field-firstSurname">
+                <label for="firstSurname" class="formbuilder-text-label">Primer Apellido<span class="formbuilder-required">*</span></label>
+                @Html.TextBoxFor(m => m.firstSurname)
+            </div>
+            <div class="formbuilder-text form-group field-secondSurname">
+                <label for="secondSurname" class="formbuilder-text-label">Segundo Apellido<span class="formbuilder-required">*</span></label>
+                @Html.TextBoxFor(m => m.secondSurname)>
+            </div>
+            <div class="formbuilder-number form-group field-phone">
+                <label for="phone" class="formbuilder-number-label">Teléfono</label>
+                @Html.TextBoxFor(m => m.phone)
+            </div>
+            <div class="formbuilder-text form-group field-email">
+                <label for="email" class="formbuilder-text-label">Email</label>
+                @Html.TextBoxFor(m => m.email)
+            </div>
+            <div class="formbuilder-text form-group field-address">
+                <label for="address" class="formbuilder-text-label">Dirección<span class="formbuilder-required">*</span></label>
+                @Html.TextBoxFor(m => m.address)
+            </div>
+            <div class="formbuilder-number form-group field-age">
+                <label for="age" class="formbuilder-number-label">Edad<span class="formbuilder-required">*</span></label>
+                @Html.TextBoxFor(m => m.age)
+            </div>
+            <div class="formbuilder-select form-group field-gender">
+                <label for="gender" class="formbuilder-select-label">Genero<span class="formbuilder-required">*</span></label>
+                @Html.TextBoxFor(m => m.gender)
+            </div>
+            <br />
+            <div class="formbuilder-button form-group field-sendForm">
+                <button type="submit" class="btn-primary btn" name="sendForm" access="false" style="primary" id="sendForm">Enviar</button>
+            </div>
+        </div>
+    </form>
+    
+    <br /><br />
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
